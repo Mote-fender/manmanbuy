@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>慢慢买首页</title>
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <link rel="stylesheet/less" href="less/index.less">
+    <script src="lib/less/less.js"></script>
+</head>
+
+<body>
+    <div id="main" class="mui-scroll-wrapper">
+        <div class="main mui-scroll">
+            <header id="header" class="mui-clearfix">
+                <img class="mui-pull-left" src="./images/header_logo.png" alt="">
+                <img class="mui-pull-right" src="./images/header_app.png" alt="">
+            </header>
+            <section id="search">
+                <div class="input">
+                    <input type="text" placeholder="请输入您要比价的商品">
+                </div>
+                <button>搜索</button>
+            </section>
+            <nav id="nav">
+                <div class="mui-row">
+                    <div class="mui-col-xs-3">
+                        <a href="./search.html">
+                            <img src="./images/ic_search.png" alt="">
+                            <p>比价搜索</p>
+                        </a>
+                    </div>
+                    <div class="mui-col-xs-3">
+                        <a href="./Cheaper.html">
+                            <img src="./images/ic_cu.png" alt="">
+                            <p>省钱控</p>
+                        </a>
+                    </div>
+                    <div class="mui-col-xs-3">
+                        <a href="./discount.html">
+                            <img src="./images/ic_coudanpin.png" alt="">
+                            <p>国内折扣</p>
+                        </a>
+                    </div>
+                    <div class="mui-col-xs-3">
+                        <a href="./bargain.html">
+                            <img src="./images/ic_bcj.png" alt="">
+                            <p>白菜价</p>
+                        </a>
+                    </div>
+                    <div class="mui-col-xs-3">
+                        <a href="#">
+                            <img src="./images/ic_temai.png" alt="">
+                            <p>小时风云榜</p>
+                        </a>
+                    </div>
+                    <div class="mui-col-xs-3">
+
+                        <a href="#">
+                            <img src="./images/ic_trend.png" alt="">
+                            <p>查看历史</p>
+                        </a>
+                    </div>
+                    <div class="mui-col-xs-3">
+                        <a href="#">
+                            <img src="./images/ic_pp.png" alt="">
+                            <p>品牌大全</p>
+                        </a>
+                    </div>
+                    <div class="mui-col-xs-3">
+                        <a href="#" class="more">
+                            <img src="./images/gengduo.png" alt="">
+                            <p>更多</p>
+                        </a>
+                    </div>
+                    <div class="mui-col-xs-3">
+                        <a href="./Coupon.html">
+                            <img src="./images/ic_temai.png" alt="">
+                            <p>优惠券</p>
+                        </a>
+                    </div>
+                    <div class="mui-col-xs-3">
+                        <a href="#">
+                            <img src="./images/ic_kb.png" alt="">
+                            <p>口碑排行</p>
+                        </a>
+                    </div>
+                    <div class="mui-col-xs-3">
+                        <a href="#">
+                            <img src="./images/ic_coudanpin.png" alt="">
+                            <p>凑单品</p>
+                        </a>
+                    </div>
+                    <div class="mui-col-xs-3">
+                        <a href="#">
+                            <img src="./images/ic_mall.png" alt="">
+                            <p>网站导航</p>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+            <section id="comment">
+                <div class="top mui-clearfix">
+                    <p class="mui-pull-left">超值折扣推荐</p>
+                    <i class="fa fa-chevron-circle-right mui-pull-right" aria-hidden="true"></i>
+                </div>
+                <ul class="mui-table-view">
+
+                </ul>
+
+            </section>
+            <section id="smore">
+                <div class="more">
+                    <a href="#" class="smore">更多优惠信息</a>
+                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                </div>
+
+            </section>
+            <section id="brand">
+                <p>品牌排行</p>
+            </section>
+            <footer id="footer">
+                    <div class="mui-row">
+                        <div class="mui-col-xs-4">
+                            <a href="#">登录</a>
+                        </div>
+                        <div class="mui-col-xs-4">
+                            <a href="#">注册</a>
+                        </div>
+                        <div class="mui-col-xs-4">
+                            <a href="#">返回顶部</a>
+                        </div>
+                    </div>
+                    <p><span>手机APP下载</span>慢慢买手机版-掌上比价平台</p>
+                    <p>m.manmanbuy.com</p>
+            </footer>
+        </div>
+    </div>
+   
+    <script type="text/html" id="commenttmp">
+        {{each result as value i}}
+        <li class="mui-table-view-cell mui-media">
+            <a href="javascript:;">
+                {{#value.productImgSm}}
+                <div class="mui-media-body">{{value.productName}}
+                    <span>{{value.productPinkage}}</span>
+                    <p class='mui-ellipsis mui-pull-left'>{{value.productFrom}} | {{value.productTime}}</p>
+                    <p class="mui-pull-right">{{value.productComCount}}</p>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+    <script src="lib/artTemplate/template.js"></script>
+    <script src="lib/zepto/zepto.min.js"></script>
+    <script src="lib/mui/js/mui.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
